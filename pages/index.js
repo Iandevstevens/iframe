@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [site, setSite] = useState("https://sebenza.taxi");
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetch("http://localhost:4007/")
+      .then((res) => res.json())
+      .then((output) => console.log(output));
+  }, []);
 
   return (
     <div>
