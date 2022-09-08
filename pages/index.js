@@ -4,7 +4,7 @@ export default function Home() {
   const [site, setSite] = useState("https://sebenza.taxi");
 
   useEffect(() => {
-    fetch("http://localhost:3000/test.json")
+    fetch("http://localhost:4000/test.json")
       .then((res) => res.json())
       .then((output) => console.log(output));
   }, []);
